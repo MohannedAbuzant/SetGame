@@ -62,14 +62,17 @@ class ViewController: UIViewController {
         if !game.matchedCards.isEmpty {
             for card in game.matchedCards{
                 game.deck.remove(at:game.deck.findCard(card: card)! )
-            }
+            } 
             game.matchedCards.removeAll()
         }
         else if game.numOfCardsOnBoard < 24 {
             game.numOfCardsOnBoard+=3
             
         }
-    
+        if game.deck.count == 0  {
+            button.isHidden = true
+        }
+        
         updateView()
         
     }
@@ -130,20 +133,20 @@ class ViewController: UIViewController {
         
     }
     
-   
+    
     func updateView(){
         ScoreLabel.text="Score:\(game.score)"
-        
+        var hiddenCounter = 0
         for index in 0..<buttons.count{
             
-            if index < game.numOfCardsOnBoard {
+            if index < game.deck.count  && index < game.numOfCardsOnBoard  {
                 
-            
-            if !game.matchedCards.isEmpty || game.numOfCardsOnBoard<24 {
-                Deal3More.isHidden=false
-            }else{
-                Deal3More.isHidden = true
-            }
+                
+                if  !game.matchedCards.isEmpty || game.numOfCardsOnBoard<24 {
+                    Deal3More.isHidden=false
+                }else{
+                    Deal3More.isHidden = true
+                }
                 let SelectedColor = { (color:Color) -> ()->UIColor in
                     switch color {
                     case .red:
@@ -155,31 +158,41 @@ class ViewController: UIViewController {
                         
                     }
                 }
-            
-            buttons[index].isHidden = false
-            let m:NSAttributedString = NSAttributedString(string:String(repeating: game.deck[index].shape.rawValue , count: game.deck[index].num) ,attributes :game.deck[index].fillness.returnValue(color: SelectedColor(game.deck[index].color)) )
-            if game.deck[index].isMatched == true {
-                buttons[index].isEnabled = false
-                buttons[index].layer.borderWidth = 5
-                buttons[index].layer.borderColor = UIColor.systemGreen.cgColor
-            }
-            else if(game.selectedCards.count==3 && game.deck[index].isSelected==true){
-                buttons[index].layer.borderWidth = 5
-                buttons[index].layer.borderColor = UIColor.systemRed.cgColor
-            }
-            else if (game.selectedCards.count != 3 && game.deck[index].isSelected==true) {
-                buttons[index].layer.borderWidth = 5
-                buttons[index].layer.borderColor = UIColor.systemTeal.cgColor
-            }
-            else{
-                buttons[index].isEnabled = true
-                buttons[index].layer.borderWidth = 0
-                buttons[index].layer.borderColor = UIColor.systemTeal.cgColor
-            }
-            buttons[index].setAttributedTitle(m, for:   UIControl.State.normal)
+                
+                buttons[index].isHidden = false
+                let innerCardText:NSAttributedString = NSAttributedString(string:String(repeating: game.deck[index].shape.rawValue , count: game.deck[index].num) ,attributes :game.deck[index].fillness.returnValue(color: SelectedColor(game.deck[index].color)) )
+                if game.deck[index].isMatched == true {
+                    buttons[index].isEnabled = false
+                    buttons[index].layer.borderWidth = 5
+                    buttons[index].layer.borderColor = UIColor.systemGreen.cgColor
+                }
+                else if(game.selectedCards.count==3 && game.deck[index].isSelected==true){
+                    buttons[index].layer.borderWidth = 5
+                    buttons[index].layer.borderColor = UIColor.systemRed.cgColor
+                }
+                else if (game.selectedCards.count != 3 && game.deck[index].isSelected==true) {
+                    buttons[index].layer.borderWidth = 5
+                    buttons[index].layer.borderColor = UIColor.systemTeal.cgColor
+                }
+                else{
+                    buttons[index].isEnabled = true
+                    buttons[index].layer.borderWidth = 0
+                    buttons[index].layer.borderColor = UIColor.systemTeal.cgColor
+                }
+                buttons[index].setAttributedTitle(innerCardText, for:   UIControl.State.normal)
             }
             else{
                 buttons[index].isHidden=true
+                hiddenCounter+=1
+            }
+            if hiddenCounter == buttons.count-1 {
+                print("Game finished !")
+                let alert =  UIAlertController(title: "Game Over", message: "Wohoo! you scored \(game.score)", preferredStyle: UIAlertController.Style.alert)
+                let action = UIAlertAction(title: "Restart Game", style: UIAlertAction.Style.default, handler: {
+                    UIAlertAction in self.RestartGame()
+                } )
+                alert.addAction(action)
+                present(alert, animated: true, completion: nil)
             }
             
         }
