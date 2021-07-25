@@ -32,16 +32,7 @@ enum Color:CaseIterable {
     case green
     case blue
 }
-extension Array where Element == Card{
-    func findCard (card :Card) -> Int?{
-        for index in 0..<self.count{
-            if card.id == self[index].id {
-                return index
-            }
-        }
-        return nil
-    }
-}
+
 
 class ViewController: UIViewController {
     @IBOutlet var buttons:[UIButton]!
@@ -59,16 +50,7 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     @IBAction func Deal3MoreCards(button:UIButton){
-        if !game.matchedCards.isEmpty {
-            for card in game.matchedCards{
-                game.deck.remove(at:game.deck.findCard(card: card)! )
-            } 
-            game.matchedCards.removeAll()
-        }
-        else if game.numOfCardsOnBoard < 24 {
-            game.numOfCardsOnBoard+=3
-            
-        }
+        game.DealMore()
         if game.deck.count == 0  {
             button.isHidden = true
         }
@@ -123,7 +105,10 @@ class ViewController: UIViewController {
                 }
             }
             else{
-                game.score-=10
+                if game.score > 0 {
+                    game.score-=10
+                }
+               
             }
             
         }
