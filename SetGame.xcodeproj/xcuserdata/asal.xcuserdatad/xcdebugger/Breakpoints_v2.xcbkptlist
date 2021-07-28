@@ -3,4 +3,146 @@
    uuid = "1575053F-05B7-4B30-B5AC-8AC699461564"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E2965427-D280-44A7-BC3F-18705212B758"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SetGame/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "15"
+            endingLineNumber = "15"
+            landmarkName = "ViewController"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2BECCD90-1EA3-4343-9871-839EDA5000A5"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SetGame/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "14"
+            endingLineNumber = "14"
+            landmarkName = "ViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "2BECCD90-1EA3-4343-9871-839EDA5000A5 - edb60c0565894d41"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SetGame.ViewController.ScoreLabel.getter : Swift.Optional&lt;__C.UILabel&gt;"
+                  moduleName = "SetGame"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/asal/Desktop/SetGame/SetGame/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "88">
+               </Location>
+               <Location
+                  uuid = "2BECCD90-1EA3-4343-9871-839EDA5000A5 - 9c3d29f0473bb435"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SetGame.ViewController.ScoreLabel.setter : Swift.Optional&lt;__C.UILabel&gt;"
+                  moduleName = "SetGame"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/asal/Desktop/SetGame/SetGame/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "155">
+               </Location>
+               <Location
+                  uuid = "2BECCD90-1EA3-4343-9871-839EDA5000A5 - 66e43ce53a56f5d2"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SetGame.ViewController.ScoreLabel.modify : Swift.Optional&lt;__C.UILabel&gt;"
+                  moduleName = "SetGame"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/asal/Desktop/SetGame/SetGame/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "59">
+               </Location>
+               <Location
+                  uuid = "2BECCD90-1EA3-4343-9871-839EDA5000A5 - 5919e021dcad0a6c"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SetGame.ViewController.ScoreLabel.modify : Swift.Optional&lt;__C.UILabel&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "SetGame"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/asal/Desktop/SetGame/SetGame/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "64">
+               </Location>
+               <Location
+                  uuid = "2BECCD90-1EA3-4343-9871-839EDA5000A5 - 202086adc78b2a35"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SetGame.ViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; SetGame.ViewController"
+                  moduleName = "SetGame"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/asal/Desktop/SetGame/SetGame/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "487">
+               </Location>
+               <Location
+                  uuid = "2BECCD90-1EA3-4343-9871-839EDA5000A5 - ee86c643ec9a9303"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SetGame.ViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;SetGame.ViewController&gt;"
+                  moduleName = "SetGame"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/asal/Desktop/SetGame/SetGame/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "428">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "50116133-8976-4B84-90A7-D14ADC834EC3"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SetGame/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
+            landmarkName = "chooseCard(button:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

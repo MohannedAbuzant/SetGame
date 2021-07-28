@@ -14,6 +14,6 @@ import Foundation
     var isSelected:Bool
     var isMatched:Bool
     let id :Int
- 
+
     
 }
